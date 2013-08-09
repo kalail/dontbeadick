@@ -50,7 +50,7 @@
                         <label for="drawing_url" class="large-15 vertical-space">Link</label>
                         <div class="control large-85 append-symbol vertical-space">
                             <span>
-                                <input type="text" id="drawing_url" value="http://www.dudedontbeadick{{ drawing.image.url }}" readonly>
+                                <input type="text" id="drawing_url" value="http://www.dudedontbeadick{% url 'dontbeadick.views.show_drawing' drawing.id %}" readonly>
                                 <i class="icon-copy"></i>
                             </span>
                             {# <button class="ink-button"><i class="icon-copy"></i> Copy link</button> #}
