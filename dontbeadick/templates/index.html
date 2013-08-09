@@ -9,22 +9,34 @@
 {% block content %}
 
     <div class="column-group gutters">
+
+        <div class "large-100 medium-100 small-100 ">
+            <h1 class="content-center quarter-vertical-space">{{ drawing.title }}</h1>
+        </div>
         
         <div class "large-80 medium-80 small-80 push-center gutters">
 
                 <div class="large-25 medium-10 small-10 vertical-space">
                     <div class="content-center vertical-space">
-                        <button class="ink-button blue">Next</button>
+                        {% if next_drawing %}
+                            <a href={% url 'show_drawing' next_drawing.id %}><button class="ink-button blue">Next</button></a>
+                        {% else %}
+                            <button class="ink-button blue" disabled>Next</button>
+                        {% endif %}
                     </div>
                 </div>
 
                 <div class="large-50 medium-80 small-80">
-                    <img src="{{ STATIC_URL }}penis1.jpg">
+                    <img src="{{ drawing.image.url }}">
                 </div>
 
                 <div class="large-25 medium-10 small-10 vertical-space">
                     <div class="content-center vertical-space">
-                        <button class="ink-button blue">Previous</button>
+                        {% if previous_drawing %}
+                            <a href={% url 'show_drawing' previous_drawing.id %}><button class="ink-button blue">Previous</button></a>
+                        {% else %}
+                            <button class="ink-button blue" disabled>Previous</button>
+                        {% endif %}
                     </div>
                 </div>
 
@@ -38,7 +50,7 @@
                         <label for="drawing_url" class="large-15 vertical-space">Link</label>
                         <div class="control large-85 append-symbol vertical-space">
                             <span>
-                                <input type="text" id="drawing_url" value="Hello" readonly>
+                                <input type="text" id="drawing_url" value="http://www.dudedontbeadick{{ drawing.image.url }}" readonly>
                                 <i class="icon-copy"></i>
                             </span>
                             {# <button class="ink-button"><i class="icon-copy"></i> Copy link</button> #}
