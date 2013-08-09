@@ -1,5 +1,5 @@
 *.py[co]
 .vagrant
 *.db
-collectstatic/
+static_root/
 media/
