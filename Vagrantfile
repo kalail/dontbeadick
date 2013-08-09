@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
     # Sync app folders
     config.vm.synced_folder "dontbeadick/", "/home/vagrant/dontbeadick/"
     # Ports
-    config.vm.network :forwarded_port, guest: 8000, host: 8000
+    config.vm.network :forwarded_port, guest: 80, host: 8000
     # Config management
     config.vm.synced_folder "salt/roots/", "/srv/"
     config.vm.provision :salt do |salt|
