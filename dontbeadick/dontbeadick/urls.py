@@ -4,10 +4,11 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
+
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'dontbeadick.views.index', name='index'),
-    url(r'^(?P<drawing_id>)/$', 'dontbeadick.views.show_drawing', name='show_drawing'),
+    url(r'^(?P<drawing_id>\d+)/$', 'dontbeadick.views.show_drawing', name='show_drawing'),
     url(r'^about/$', 'dontbeadick.views.about', name='about'),
     # url(r'^dontbeadick/', include('dontbeadick.foo.urls')),
 

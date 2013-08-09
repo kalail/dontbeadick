@@ -1,0 +1,9 @@
+Django==1.5.1
+PIL==1.1.7
+South==0.8.1
+Unipath==1.0
+argparse==1.2.1
+distribute==0.6.24
+django-suit==0.2.3
+gunicorn==17.5
+wsgiref==0.1.2
