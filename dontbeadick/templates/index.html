@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+
+{% block nav %}
+    {% include "_nav.html" with active='index' %}
+{% endblock nav %}
+
+
+{% block content %}
+
+    <div class="column-group gutters">
+        
+        <div class "large-80 medium-80 small-80 push-center gutters">
+
+                <div class="large-25 medium-10 small-10 vertical-space">
+                    <div class="content-center vertical-space">
+                        <button class="ink-button blue">Next</button>
+                    </div>
+                </div>
+
+                <div class="large-50 medium-80 small-80">
+                    <img src="{{ STATIC_URL }}penis1.jpg">
+                </div>
+
+                <div class="large-25 medium-10 small-10 vertical-space">
+                    <div class="content-center vertical-space">
+                        <button class="ink-button blue">Previous</button>
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="large-40 medium-66 small-70 push-center">
+
+            <form class="ink-form" action="#">
+                <div class="control-group">
+                    <div class="column-group gutters">
+                        <label for="drawing_url" class="large-15 vertical-space">Link</label>
+                        <div class="control large-85 append-symbol vertical-space">
+                            <span>
+                                <input type="text" id="drawing_url" value="Hello" readonly>
+                                <i class="icon-copy"></i>
+                            </span>
+                            {# <button class="ink-button"><i class="icon-copy"></i> Copy link</button> #}
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+{% endblock content %}  

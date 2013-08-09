@@ -1,0 +1,6 @@
+<nav class="ink-navigation space">
+    <ul class="menu horizontal rounded shadowed blue">
+        <li class="{% if active == 'index' %}active{% endif %}"><a href={% url 'index' %}><i class="icon-home"></i> <strong>Don't Be A Dick</strong></a></li>
+        <li class="{% if active == 'about' %}active{% endif %}"><a href={% url 'about' %}>About</a></li>
+    </ul>
+</nav>
