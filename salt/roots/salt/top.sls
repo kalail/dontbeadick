@@ -1,5 +1,5 @@
 base:
     '*':
         - basic
-        - nginx
+        - server
         - app
