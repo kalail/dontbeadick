@@ -18,10 +18,10 @@
 
                 <div class="large-25 medium-10 small-10 vertical-space">
                     <div class="content-center vertical-space">
-                        {% if next_drawing %}
-                            <a href={% url 'show_drawing' next_drawing.id %}><button class="ink-button blue">Next</button></a>
+                        {% if previous_drawing %}
+                            <a href={% url 'show_drawing' previous_drawing.id %}><button class="ink-button blue">Previous</button></a>
                         {% else %}
-                            <button class="ink-button blue" disabled>Next</button>
+                            <button class="ink-button blue" disabled>Previous</button>
                         {% endif %}
                     </div>
                 </div>
@@ -32,10 +32,10 @@
 
                 <div class="large-25 medium-10 small-10 vertical-space">
                     <div class="content-center vertical-space">
-                        {% if previous_drawing %}
-                            <a href={% url 'show_drawing' previous_drawing.id %}><button class="ink-button blue">Previous</button></a>
+                        {% if next_drawing %}
+                            <a href={% url 'show_drawing' next_drawing.id %}><button class="ink-button blue">Next</button></a>
                         {% else %}
-                            <button class="ink-button blue" disabled>Previous</button>
+                            <button class="ink-button blue" disabled>Next</button>
                         {% endif %}
                     </div>
                 </div>
