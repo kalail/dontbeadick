@@ -1,19 +1,17 @@
 {% extends "base.html" %}
 
 
-{% block nav %}
-    {% include "_nav.html" with active='index' %}
-{% endblock nav %}
-
 
 {% block content %}
 
     <div class="column-group gutters">
 
+        {# Title #}
         <div class "large-100 medium-100 small-100 ">
             <h1 class="content-center quarter-vertical-space">{{ drawing.title }}</h1>
         </div>
         
+        {# Drawing #}
         <div class "large-80 medium-80 small-80 push-center gutters">
 
                 <div class="large-25 medium-10 small-10 vertical-space">
@@ -42,6 +40,7 @@
 
         </div>
 
+        {# Link #}
         <div class="large-40 medium-66 small-70 push-center">
 
             <form class="ink-form" action="#">

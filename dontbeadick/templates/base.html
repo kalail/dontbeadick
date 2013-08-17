@@ -38,9 +38,14 @@
 
         <div class="ink-grid">
             
-            {% block nav %}
-                {% include "_nav.html" %}
-            {% endblock nav %}
+            <nav class="ink-navigation space">
+                <ul class="menu horizontal rounded shadowed blue">
+                    {# Computers and Tablets #}
+                    <li class="active hide-small"><a href=""><strong>Don't Be A Dick</strong></a></li>
+                    {# Phones #}
+                    <li class="active hide-all show-small"><a href=""><i class="icon-home"></i></a></li>
+                </ul>
+            </nav>
 
             <br>
 
